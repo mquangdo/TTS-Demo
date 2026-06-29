@@ -1,36 +1,54 @@
 *{
+    margin:0;
+    padding:0;
     box-sizing:border-box;
 }
 
 body{
 
-    margin:0;
+    background:#ffffff;
 
-    background:#fafafa;
+    font-family:
+        "Segoe UI",
+        Roboto,
+        Helvetica,
+        Arial,
+        sans-serif;
 
     color:#222;
-
-    font-family:"Segoe UI",Arial,sans-serif;
 }
 
-.wrap{
+.container{
 
-    max-width:1200px;
+    width:min(1200px,92%);
 
     margin:auto;
 
-    padding:50px 30px;
+    padding:60px 0;
 }
 
 h1{
 
     text-align:center;
 
-    font-size:38px;
+    font-size:44px;
 
-    color:#23415f;
+    font-weight:700;
 
-    margin-bottom:40px;
+    color:#24374d;
+
+    margin-bottom:12px;
+}
+
+.subtitle{
+
+    text-align:center;
+
+    color:#666;
+
+    font-size:18px;
+
+    margin-bottom:45px;
 }
 
 table{
@@ -38,63 +56,54 @@ table{
     width:100%;
 
     border-collapse:collapse;
-
-    background:white;
-
-    border-radius:12px;
-
-    overflow:hidden;
-
-    box-shadow:0 4px 12px rgba(0,0,0,.08);
 }
 
-thead{
+thead th{
 
-    background:#f3f5f7;
-}
+    border-bottom:2px solid #222;
 
-th{
-
-    padding:18px;
+    padding:16px;
 
     font-size:18px;
 
-    border-bottom:2px solid #ddd;
+    font-weight:700;
 }
 
-td{
+tbody td{
 
-    padding:22px 18px;
+    padding:24px 16px;
 
-    border-bottom:1px solid #ececec;
+    border-bottom:1px solid #e5e5e5;
 
     vertical-align:middle;
 }
 
 tbody tr:hover{
 
-    background:#f8fbff;
+    background:#fafafa;
 }
 
-.col-model{
+.model{
 
-    width:20%;
+    width:22%;
 
-    font-weight:600;
+    font-weight:700;
 
-    color:#1f3d5c;
+    font-size:18px;
+
+    color:#1f3f63;
 }
 
-.col-text{
+.text{
 
-    width:50%;
+    width:48%;
+
+    font-size:17px;
 
     line-height:1.8;
-
-    font-size:16px;
 }
 
-.col-audio{
+.audio{
 
     width:30%;
 
@@ -103,7 +112,61 @@ tbody tr:hover{
 
 audio{
 
-    width:260px;
+    width:280px;
+}
 
-    height:42px;
+@media(max-width:900px){
+
+table,
+thead,
+tbody,
+tr,
+td,
+th{
+
+    display:block;
+}
+
+thead{
+
+    display:none;
+}
+
+tr{
+
+    margin-bottom:35px;
+
+    border:1px solid #ddd;
+
+    border-radius:12px;
+
+    padding:18px;
+}
+
+.model{
+
+    width:100%;
+
+    margin-bottom:15px;
+}
+
+.text{
+
+    width:100%;
+
+    margin-bottom:20px;
+}
+
+.audio{
+
+    width:100%;
+
+    text-align:left;
+}
+
+audio{
+
+    width:100%;
+}
+
 }
