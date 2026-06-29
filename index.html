@@ -3,32 +3,38 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Demo Text-to-Speech</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<title>Viet-Muong Samples</title>
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<div class="scope">
+<div class="wrap">
 
-  <header class="page-head">
-    <p class="eyebrow">DỰ ÁN · TEXT-TO-SPEECH</p>
-    <h1>Văn bản, đọc thành lời</h1>
-    <p class="lede">Mỗi mẫu dưới đây gồm một đoạn văn bản đầu vào và file âm thanh do hệ thống tổng hợp tương ứng. Nhấn nút phát để nghe và so sánh với văn bản gốc.</p>
-  </header>
+  <h1>Viet-Muong Samples</h1>
 
-  <main id="sample-list" class="sample-list" aria-label="Danh sách mẫu văn bản và âm thanh">
-    <!-- Các mẫu được render bằng JavaScript từ script.js -->
-  </main>
-
-  <footer class="page-foot">
-    <p>Thêm mẫu mới bằng cách chỉnh sửa mảng <code>samples</code> trong <code>script.js</code> và đặt file âm thanh vào thư mục <code>audio/</code>.</p>
-  </footer>
+  <table>
+    <thead>
+      <tr>
+        <th class="col-model">Model</th>
+        <th class="col-text">Text</th>
+        <th class="col-audio">Audio</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="col-model">Spark-TTS</td>
+        <td class="col-text"><!-- điền văn bản ở đây --></td>
+        <td class="col-audio"><audio controls src="audio/spark-tts.mp3"></audio></td>
+      </tr>
+      <tr>
+        <td class="col-model">Tacotron2+HifiGAN</td>
+        <td class="col-text"><!-- điền văn bản ở đây --></td>
+        <td class="col-audio"><audio controls src="audio/tacotron2-hifigan.mp3"></audio></td>
+      </tr>
+    </tbody>
+  </table>
 
 </div>
 
-<script src="script.js"></script>
 </body>
 </html>

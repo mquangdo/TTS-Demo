@@ -1,232 +1,67 @@
-/* ==========================================================================
-   Design tokens
-   ========================================================================== */
-:root {
-  --bg:        #101A1D;
-  --surface:   #182427;
-  --surface-2: #1F2D31;
-  --line:      #2A3A3E;
-
-  --ink:       #EDF3F2;
-  --ink-muted: #84A0A0;
-
-  --signal:    #5EEAD4;   /* cyan — idle / waveform trace */
-  --active:    #FF8B6B;   /* coral — currently playing */
-
-  --font-display: "Space Grotesk", system-ui, sans-serif;
-  --font-body:    "Source Serif 4", Georgia, serif;
-  --font-mono:    "JetBrains Mono", ui-monospace, monospace;
-
-  --radius: 10px;
-}
-
-* { box-sizing: border-box; }
-
-html, body {
-  margin: 0;
-  background: var(--bg);
-  color: var(--ink);
-  font-family: var(--font-body);
+* {
+  box-sizing: border-box;
 }
 
 body {
-  background-image:
-    radial-gradient(circle at 12% 8%, rgba(94, 234, 212, 0.06), transparent 40%),
-    radial-gradient(circle at 88% 92%, rgba(255, 139, 107, 0.05), transparent 40%);
-}
-
-.scope {
-  max-width: 760px;
-  margin: 0 auto;
-  padding: 64px 24px 96px;
-}
-
-/* Focus visibility, kept consistent everywhere */
-:focus-visible {
-  outline: 2px solid var(--signal);
-  outline-offset: 3px;
-  border-radius: 4px;
-}
-
-/* ==========================================================================
-   Header
-   ========================================================================== */
-.page-head { margin-bottom: 48px; }
-
-.eyebrow {
-  font-family: var(--font-mono);
-  font-size: 12px;
-  letter-spacing: 0.12em;
-  color: var(--signal);
-  margin: 0 0 14px;
-}
-
-.page-head h1 {
-  font-family: var(--font-display);
-  font-weight: 700;
-  font-size: clamp(28px, 4.5vw, 40px);
-  line-height: 1.15;
-  margin: 0 0 16px;
-  letter-spacing: -0.01em;
-}
-
-.lede {
-  font-family: var(--font-body);
-  font-size: 17px;
-  line-height: 1.6;
-  color: var(--ink-muted);
   margin: 0;
-  max-width: 56ch;
+  background: #ffffff;
+  color: #1a1a1a;
+  font-family: -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
 }
 
-/* ==========================================================================
-   Sample list
-   ========================================================================== */
-.sample-list {
-  display: flex;
-  flex-direction: column;
-  gap: 14px;
+.wrap {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 40px 24px 80px;
 }
 
-.sample {
-  background: var(--surface);
-  border: 1px solid var(--line);
-  border-radius: var(--radius);
-  padding: 20px 22px;
-  display: grid;
-  grid-template-columns: auto auto 1fr auto;
-  align-items: center;
-  gap: 18px;
-  transition: border-color 0.2s ease, background 0.2s ease;
+h1 {
+  text-align: center;
+  color: #2c4a6b;
+  font-size: 28px;
+  font-weight: 700;
+  margin: 0 0 36px;
 }
 
-.sample.is-playing {
-  border-color: rgba(255, 139, 107, 0.45);
-  background: var(--surface-2);
+table {
+  width: 100%;
+  border-collapse: collapse;
 }
 
-.sample-index {
-  font-family: var(--font-mono);
-  font-size: 13px;
-  color: var(--ink-muted);
-  min-width: 28px;
+th {
+  font-size: 15px;
+  font-weight: 700;
+  color: #1a1a1a;
+  padding: 0 16px 12px;
+  border-bottom: 2px solid #1a1a1a;
 }
 
-.sample.is-playing .sample-index { color: var(--active); }
-
-/* Play / pause button */
-.play-btn {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  border: 1px solid var(--line);
-  background: var(--bg);
-  color: var(--signal);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  flex-shrink: 0;
-  transition: border-color 0.15s ease, transform 0.1s ease;
+td {
+  padding: 18px 16px;
+  border-bottom: 1px solid #e3e3e3;
+  font-size: 15px;
+  color: #333;
 }
 
-.play-btn:hover { border-color: var(--signal); }
-.play-btn:active { transform: scale(0.94); }
-
-.sample.is-playing .play-btn {
-  color: var(--active);
-  border-color: var(--active);
+.col-model {
+  width: 22%;
+  text-align: left;
 }
 
-.play-btn svg { width: 14px; height: 14px; }
-
-/* Text + waveform column */
-.sample-body { min-width: 0; }
-
-.sample-text {
-  font-family: var(--font-body);
-  font-size: 16.5px;
-  line-height: 1.55;
-  color: var(--ink);
-  margin: 0 0 10px;
+.col-text {
+  width: 48%;
+  text-align: left;
 }
 
-.waveform {
-  display: flex;
-  align-items: center;
-  gap: 3px;
-  height: 22px;
+.col-audio {
+  width: 30%;
+  text-align: center;
 }
 
-.waveform .bar {
-  width: 3px;
-  border-radius: 2px;
-  background: var(--line);
-  height: 6px;
-  transition: height 0.12s ease, background 0.2s ease;
+td.col-model {
+  font-weight: 600;
 }
 
-.sample.is-playing .waveform .bar {
-  background: var(--active);
-}
-
-/* Duration */
-.sample-meta {
-  font-family: var(--font-mono);
-  font-size: 12.5px;
-  color: var(--ink-muted);
-  text-align: right;
-  white-space: nowrap;
-}
-
-.sample.is-playing .sample-meta { color: var(--active); }
-
-/* ==========================================================================
-   Footer
-   ========================================================================== */
-.page-foot {
-  margin-top: 56px;
-  padding-top: 20px;
-  border-top: 1px solid var(--line);
-  font-family: var(--font-mono);
-  font-size: 12.5px;
-  color: var(--ink-muted);
-  line-height: 1.6;
-}
-
-.page-foot code {
-  font-family: var(--font-mono);
-  background: var(--surface);
-  border: 1px solid var(--line);
-  border-radius: 4px;
-  padding: 1px 6px;
-  color: var(--signal);
-}
-
-/* ==========================================================================
-   Responsive
-   ========================================================================== */
-@media (max-width: 560px) {
-  .sample {
-    grid-template-columns: auto 1fr;
-    grid-template-areas:
-      "index meta"
-      "play  body";
-    row-gap: 12px;
-  }
-  .sample-index { grid-area: index; }
-  .sample-meta  { grid-area: meta; }
-  .play-btn     { grid-area: play; }
-  .sample-body  { grid-area: body; }
-}
-
-/* ==========================================================================
-   Reduced motion
-   ========================================================================== */
-@media (prefers-reduced-motion: reduce) {
-  .waveform .bar,
-  .sample,
-  .play-btn {
-    transition: none !important;
-  }
+audio {
+  height: 32px;
 }
