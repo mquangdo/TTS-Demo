@@ -65,3 +65,45 @@ td.col-model {
 audio {
   height: 32px;
 }
+
+/* ===== Mel-based / LLM sections ===== */
+
+.model-section {
+  margin-top: 64px;
+}
+
+.model-section h2 {
+  font-size: 22px;
+  font-weight: 700;
+  color: #2c4a6b;
+  margin: 0 0 24px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #1a1a1a;
+}
+
+.model-block {
+  margin-bottom: 40px;
+}
+
+.model-block h3 {
+  font-size: 17px;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin: 0 0 10px;
+}
+
+.model-block p {
+  font-size: 15px;
+  line-height: 1.7;
+  color: #333;
+  margin: 0 0 18px;
+  max-width: 760px;
+}
+
+.model-block img {
+  display: block;
+  max-width: 100%;
+  border: 1px solid #e3e3e3;
+  border-radius: 4px;
+}
+
