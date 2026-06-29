@@ -1,172 +1,67 @@
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
+* {
+  box-sizing: border-box;
 }
 
-body{
-
-    background:#ffffff;
-
-    font-family:
-        "Segoe UI",
-        Roboto,
-        Helvetica,
-        Arial,
-        sans-serif;
-
-    color:#222;
+body {
+  margin: 0;
+  background: #ffffff;
+  color: #1a1a1a;
+  font-family: -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
 }
 
-.container{
-
-    width:min(1200px,92%);
-
-    margin:auto;
-
-    padding:60px 0;
+.wrap {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 40px 24px 80px;
 }
 
-h1{
-
-    text-align:center;
-
-    font-size:44px;
-
-    font-weight:700;
-
-    color:#24374d;
-
-    margin-bottom:12px;
+h1 {
+  text-align: center;
+  color: #2c4a6b;
+  font-size: 28px;
+  font-weight: 700;
+  margin: 0 0 36px;
 }
 
-.subtitle{
-
-    text-align:center;
-
-    color:#666;
-
-    font-size:18px;
-
-    margin-bottom:45px;
+table {
+  width: 100%;
+  border-collapse: collapse;
 }
 
-table{
-
-    width:100%;
-
-    border-collapse:collapse;
+th {
+  font-size: 15px;
+  font-weight: 700;
+  color: #1a1a1a;
+  padding: 0 16px 12px;
+  border-bottom: 2px solid #1a1a1a;
 }
 
-thead th{
-
-    border-bottom:2px solid #222;
-
-    padding:16px;
-
-    font-size:18px;
-
-    font-weight:700;
+td {
+  padding: 18px 16px;
+  border-bottom: 1px solid #e3e3e3;
+  font-size: 15px;
+  color: #333;
 }
 
-tbody td{
-
-    padding:24px 16px;
-
-    border-bottom:1px solid #e5e5e5;
-
-    vertical-align:middle;
+.col-model {
+  width: 22%;
+  text-align: left;
 }
 
-tbody tr:hover{
-
-    background:#fafafa;
+.col-text {
+  width: 48%;
+  text-align: left;
 }
 
-.model{
-
-    width:22%;
-
-    font-weight:700;
-
-    font-size:18px;
-
-    color:#1f3f63;
+.col-audio {
+  width: 30%;
+  text-align: center;
 }
 
-.text{
-
-    width:48%;
-
-    font-size:17px;
-
-    line-height:1.8;
+td.col-model {
+  font-weight: 600;
 }
 
-.audio{
-
-    width:30%;
-
-    text-align:center;
-}
-
-audio{
-
-    width:280px;
-}
-
-@media(max-width:900px){
-
-table,
-thead,
-tbody,
-tr,
-td,
-th{
-
-    display:block;
-}
-
-thead{
-
-    display:none;
-}
-
-tr{
-
-    margin-bottom:35px;
-
-    border:1px solid #ddd;
-
-    border-radius:12px;
-
-    padding:18px;
-}
-
-.model{
-
-    width:100%;
-
-    margin-bottom:15px;
-}
-
-.text{
-
-    width:100%;
-
-    margin-bottom:20px;
-}
-
-.audio{
-
-    width:100%;
-
-    text-align:left;
-}
-
-audio{
-
-    width:100%;
-}
-
+audio {
+  height: 32px;
 }
