@@ -12,24 +12,54 @@
 
   <h1>Viet-Muong Samples</h1>
 
+  <h2 class="table-title">Train Samples</h2>
   <table>
     <thead>
       <tr>
-        <th class="col-model">Model</th>
         <th class="col-text">Text</th>
-        <th class="col-audio">Audio</th>
+        <th class="col-audio">Spark-TTS</th>
+        <th class="col-audio">Tacotron2 + HiFiGAN</th>
+        <th class="col-audio">Ground Truth</th>
       </tr>
     </thead>
     <tbody>
       <tr>
-        <td class="col-model">Spark-TTS</td>
         <td class="col-text">Nhà có ba khẩu, một mẹ già hơn tám mươi tuổi.</td>
-        <td class="col-audio"><audio controls src="audio/spark-tts.wav"></audio></td>
+        <td class="col-audio"><audio controls src="sparktts_train_sample/test1.wav"></audio></td>
+        <td class="col-audio"><audio controls src="tacotron2_train_sample/test1.wav"></audio></td>
+        <td class="col-audio"><audio controls src="train_gt/test1.wav"></audio></td>
       </tr>
       <tr>
-        <td class="col-model">Tacotron2 + HiFiGAN</td>
         <td class="col-text">Xin chào địa phương.</td>
-        <td class="col-audio"><audio controls src="audio/tacotron2-hifigan.wav"></audio></td>
+        <td class="col-audio"><audio controls src="sparktts_train_sample/test2.wav"></audio></td>
+        <td class="col-audio"><audio controls src="tacotron2_train_sample/test2.wav"></audio></td>
+        <td class="col-audio"><audio controls src="train_gt/test2.wav"></audio></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h2 class="table-title">Test Samples</h2>
+  <table>
+    <thead>
+      <tr>
+        <th class="col-text">Text</th>
+        <th class="col-audio">Spark-TTS</th>
+        <th class="col-audio">Tacotron2 + HiFiGAN</th>
+        <th class="col-audio">Ground Truth</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="col-text">Nhà có ba khẩu, một mẹ già hơn tám mươi tuổi.</td>
+        <td class="col-audio"><audio controls src="sparktts_test_sample/test1.wav"></audio></td>
+        <td class="col-audio"><audio controls src="tacotron2_test_sample/test1.wav"></audio></td>
+        <td class="col-audio"><audio controls src="test_gt/test1.wav"></audio></td>
+      </tr>
+      <tr>
+        <td class="col-text">Xin chào địa phương.</td>
+        <td class="col-audio"><audio controls src="sparktts_test_sample/test2.wav"></audio></td>
+        <td class="col-audio"><audio controls src="tacotron2_test_sample/test2.wav"></audio></td>
+        <td class="col-audio"><audio controls src="test_gt/test2.wav"></audio></td>
       </tr>
     </tbody>
   </table>

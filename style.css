@@ -49,12 +49,12 @@ td {
 }
 
 .col-text {
-  width: 48%;
+  width: 40%;
   text-align: left;
 }
 
 .col-audio {
-  width: 30%;
+  width: 20%;
   text-align: center;
 }
 
@@ -64,6 +64,25 @@ td.col-model {
 
 audio {
   height: 32px;
+  width: 100%;
+  max-width: 180px;
+}
+
+/* ===== Table titles (Train / Test) ===== */
+
+.table-title {
+  font-size: 20px;
+  font-weight: 700;
+  color: #2c4a6b;
+  margin: 48px 0 16px;
+}
+
+h1 + .table-title {
+  margin-top: 0;
+}
+
+table + .table-title {
+  margin-top: 56px;
 }
 
 /* ===== Mel-based / LLM sections ===== */
@@ -106,4 +125,3 @@ audio {
   border: 1px solid #e3e3e3;
   border-radius: 4px;
 }
-
